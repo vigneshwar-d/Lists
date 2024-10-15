@@ -70,22 +70,78 @@
 		BDA5A5C32CBE9F6200866748 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				BDA5A5E72CBEB88600866748 /* models */,
+				BDA5A5E62CBEB87400866748 /* views */,
+				BDA5A5E82CBEB88C00866748 /* viewModels */,
 				BDA5A5C42CBE9F6200866748 /* AppDelegate.swift */,
 				BDA5A5C62CBE9F6200866748 /* SceneDelegate.swift */,
-				BDA5A5C82CBE9F6200866748 /* AllListsViewController.swift */,
 				BDA5A5CA2CBE9F6200866748 /* Main.storyboard */,
 				BDA5A5CD2CBE9F6A00866748 /* Assets.xcassets */,
 				BDA5A5CF2CBE9F6A00866748 /* LaunchScreen.storyboard */,
 				BDA5A5D22CBE9F6A00866748 /* Info.plist */,
-				BDA5A5D82CBEA1A000866748 /* ListCellTableViewCell.swift */,
-				BDA5A5D92CBEA1A000866748 /* ListCellTableViewCell.xib */,
-				BDA5A5DC2CBEAE9500866748 /* ListsViewModel.swift */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		BDA5A5E62CBEB87400866748 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BDA5A5EA2CBEB90F00866748 /* viewControllers */,
+				BDA5A5E92CBEB8DD00866748 /* tableViewCells */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		BDA5A5E72CBEB88600866748 /* models */ = {
+			isa = PBXGroup;
+			children = (
 				BDA5A5DE2CBEAEB200866748 /* List.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		BDA5A5E82CBEB88C00866748 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BDA5A5DC2CBEAE9500866748 /* ListsViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		BDA5A5E92CBEB8DD00866748 /* tableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				BDA5A5EC2CBEB94F00866748 /* ListCellTableViewCell */,
+				BDA5A5EB2CBEB93E00866748 /* ListItemsTableViewCell */,
+			);
+			path = tableViewCells;
+			sourceTree = "<group>";
+		};
+		BDA5A5EA2CBEB90F00866748 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDA5A5C82CBE9F6200866748 /* AllListsViewController.swift */,
 				BDA5A5E02CBEB1F100866748 /* ListItemViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		BDA5A5EB2CBEB93E00866748 /* ListItemsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				BDA5A5E22CBEB34200866748 /* ListItemsTableViewCell.swift */,
 				BDA5A5E32CBEB34200866748 /* ListItemsTableViewCell.xib */,
 			);
-			path = Lists;
+			path = ListItemsTableViewCell;
+			sourceTree = "<group>";
+		};
+		BDA5A5EC2CBEB94F00866748 /* ListCellTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDA5A5D82CBEA1A000866748 /* ListCellTableViewCell.swift */,
+				BDA5A5D92CBEA1A000866748 /* ListCellTableViewCell.xib */,
+			);
+			path = ListCellTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
