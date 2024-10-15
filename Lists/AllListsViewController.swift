@@ -9,6 +9,8 @@ import UIKit
 
 class AllListsViewController: UIViewController {
 
+    let listData = ListsViewModel.fetchLists()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -39,6 +41,7 @@ class AllListsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "List(s)"
+        navigationController?.navigationBar.tintColor = .white
     }
     
     private func setUpTableView() {
@@ -60,14 +63,22 @@ extension AllListsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "list.cell") as! ListCellTableViewCell
         cell.accessoryType = .disclosureIndicator
+        cell.listTitle.text = listData[indexPath.row].name
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return listData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = ListItemViewController()
+        vc.items = listData[indexPath.row].items
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -15,6 +15,11 @@
 		BDA5A5D12CBE9F6A00866748 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA5A5CF2CBE9F6A00866748 /* LaunchScreen.storyboard */; };
 		BDA5A5DA2CBEA1A000866748 /* ListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A5D82CBEA1A000866748 /* ListCellTableViewCell.swift */; };
 		BDA5A5DB2CBEA1A000866748 /* ListCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA5A5D92CBEA1A000866748 /* ListCellTableViewCell.xib */; };
+		BDA5A5DD2CBEAE9500866748 /* ListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A5DC2CBEAE9500866748 /* ListsViewModel.swift */; };
+		BDA5A5DF2CBEAEB200866748 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A5DE2CBEAEB200866748 /* List.swift */; };
+		BDA5A5E12CBEB1F100866748 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A5E02CBEB1F100866748 /* ListItemViewController.swift */; };
+		BDA5A5E42CBEB34200866748 /* ListItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A5E22CBEB34200866748 /* ListItemsTableViewCell.swift */; };
+		BDA5A5E52CBEB34200866748 /* ListItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA5A5E32CBEB34200866748 /* ListItemsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		BDA5A5D22CBE9F6A00866748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDA5A5D82CBEA1A000866748 /* ListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellTableViewCell.swift; sourceTree = "<group>"; };
 		BDA5A5D92CBEA1A000866748 /* ListCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCellTableViewCell.xib; sourceTree = "<group>"; };
+		BDA5A5DC2CBEAE9500866748 /* ListsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewModel.swift; sourceTree = "<group>"; };
+		BDA5A5DE2CBEAEB200866748 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		BDA5A5E02CBEB1F100866748 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
+		BDA5A5E22CBEB34200866748 /* ListItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsTableViewCell.swift; sourceTree = "<group>"; };
+		BDA5A5E32CBEB34200866748 /* ListItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,11 @@
 				BDA5A5D22CBE9F6A00866748 /* Info.plist */,
 				BDA5A5D82CBEA1A000866748 /* ListCellTableViewCell.swift */,
 				BDA5A5D92CBEA1A000866748 /* ListCellTableViewCell.xib */,
+				BDA5A5DC2CBEAE9500866748 /* ListsViewModel.swift */,
+				BDA5A5DE2CBEAEB200866748 /* List.swift */,
+				BDA5A5E02CBEB1F100866748 /* ListItemViewController.swift */,
+				BDA5A5E22CBEB34200866748 /* ListItemsTableViewCell.swift */,
+				BDA5A5E32CBEB34200866748 /* ListItemsTableViewCell.xib */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -132,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA5A5D12CBE9F6A00866748 /* LaunchScreen.storyboard in Resources */,
+				BDA5A5E52CBEB34200866748 /* ListItemsTableViewCell.xib in Resources */,
 				BDA5A5DB2CBEA1A000866748 /* ListCellTableViewCell.xib in Resources */,
 				BDA5A5CE2CBE9F6A00866748 /* Assets.xcassets in Resources */,
 				BDA5A5CC2CBE9F6200866748 /* Main.storyboard in Resources */,
@@ -145,10 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA5A5E42CBEB34200866748 /* ListItemsTableViewCell.swift in Sources */,
 				BDA5A5C92CBE9F6200866748 /* AllListsViewController.swift in Sources */,
 				BDA5A5DA2CBEA1A000866748 /* ListCellTableViewCell.swift in Sources */,
+				BDA5A5DD2CBEAE9500866748 /* ListsViewModel.swift in Sources */,
 				BDA5A5C52CBE9F6200866748 /* AppDelegate.swift in Sources */,
+				BDA5A5E12CBEB1F100866748 /* ListItemViewController.swift in Sources */,
 				BDA5A5C72CBE9F6200866748 /* SceneDelegate.swift in Sources */,
+				BDA5A5DF2CBEAEB200866748 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
