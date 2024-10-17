@@ -10,6 +10,7 @@ import CoreData
 
 class ListsViewModel {
     
+    static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let context = ((UIApplication.shared.delegate) as! AppDelegate).persistenceContainer.viewContext
     
     static func fetchLists() -> [List] {

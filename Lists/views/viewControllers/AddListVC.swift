@@ -76,15 +76,8 @@ class AddListVC: UIViewController {
         if listNameTextField.hasText {
             let newList = ListDataModel(context: ListsViewModel.context)
             newList.name = listNameTextField.text!
-            
-            do {
-                try ListsViewModel.context.save()
-            } catch {
-                print(error.localizedDescription)
-            }
-            
+            ListsViewModel.appDelegate.saveContext()
             fromVC?.refreshData()
-            
             self.dismiss(animated: true)
         }
     }
