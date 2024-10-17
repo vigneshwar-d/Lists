@@ -10,7 +10,7 @@ import CoreData
 
 class AddListVC: UIViewController {
     
-    let context = ((UIApplication.shared.delegate) as! AppDelegate).persistenceContainer.viewContext
+    var fromVC: AllListsViewController?
     
     lazy var listNameLabel: UILabel = {
         let label = UILabel()
@@ -74,14 +74,16 @@ class AddListVC: UIViewController {
     @objc private func addAction() {
         
         if listNameTextField.hasText {
-            let newList = ListDataModel(context: context)
+            let newList = ListDataModel(context: ListsViewModel.context)
             newList.name = listNameTextField.text!
             
             do {
-                try context.save()
+                try ListsViewModel.context.save()
             } catch {
                 print(error.localizedDescription)
             }
+            
+            fromVC?.refreshData()
             
             self.dismiss(animated: true)
         }

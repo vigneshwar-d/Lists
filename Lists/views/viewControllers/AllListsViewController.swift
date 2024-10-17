@@ -9,7 +9,11 @@ import UIKit
 
 class AllListsViewController: UIViewController {
 
-    let listData = ListsViewModel.fetchLists()
+    var listData: [ListDataModel] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -21,12 +25,16 @@ class AllListsViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         setUpNavBar()
         setUpTableView()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        refreshData()
+    }
+    
     private func setUpNavBar() {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .systemBlue
@@ -50,22 +58,24 @@ class AllListsViewController: UIViewController {
     }
     
     @objc private func addButtonPressed() {
-        
         let vc = AddListVC()
+        vc.fromVC = self
         vc.modalPresentationStyle = .formSheet
         self.present(vc, animated: true)
     }
     
     private func setUpTableView() {
-        
         view.addSubview(tableView)
-        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
         ])
+    }
+    
+    func refreshData() {
+        listData = ListsViewModel.fetchListFromDatabase()
     }
 
 }
@@ -90,7 +100,7 @@ extension AllListsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = ListItemViewController()
-        vc.items = listData[indexPath.row].items
+//        vc.items = listData[indexPath.row].items
         navigationController?.pushViewController(vc, animated: true)
     }
 }

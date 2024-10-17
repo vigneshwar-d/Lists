@@ -5,9 +5,12 @@
 //  Created by Vigneshwar Devendran on 15/10/24.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 class ListsViewModel {
+    
+    static let context = ((UIApplication.shared.delegate) as! AppDelegate).persistenceContainer.viewContext
     
     static func fetchLists() -> [List] {
         let list1 = List(name: "House", items: [
@@ -56,4 +59,17 @@ class ListsViewModel {
         ])
         return [list1, list2, list3]
     }
+    
+    static func fetchListFromDatabase() -> [ListDataModel] {
+        let fetchRequest: NSFetchRequest<ListDataModel> = ListDataModel.fetchRequest()
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            return result
+        } catch {
+            print(error.localizedDescription)
+            return []
+        }
+    }
+    
 }
