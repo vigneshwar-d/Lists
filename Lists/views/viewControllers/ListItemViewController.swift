@@ -10,7 +10,7 @@ import UIKit
 
 class ListItemViewController: UIViewController {
     
-    var items: [String] = []
+    var items: [ListItem] = []
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -43,7 +43,7 @@ class ListItemViewController: UIViewController {
 extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "items.cell") as! ListItemsTableViewCell
-        cell.itemName.text = items[indexPath.row]
+        cell.itemName.text = items[indexPath.row].name
         return cell
     }
     

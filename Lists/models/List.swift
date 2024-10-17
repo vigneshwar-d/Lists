@@ -9,5 +9,5 @@ import Foundation
 
 struct List {
     var name: String
-    var items: [String]
+    var items: [ListItem]
 }
