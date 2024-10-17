@@ -14,16 +14,15 @@ class AllListsViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(ListCellTableViewCell.self, forCellReuseIdentifier: "list.cell")
+        tableView.delegate = self
+        tableView.dataSource = self
         return tableView
     }()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        tableView.register(ListCellTableViewCell.self, forCellReuseIdentifier: "list.cell")
-        tableView.delegate = self
-        tableView.dataSource = self
         setUpNavBar()
         setUpTableView()
     }
@@ -42,6 +41,19 @@ class AllListsViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "List(s)"
         navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(
+            image: .add,
+            style: .plain,
+            target: self,
+            action: #selector(addButtonPressed)
+        )
+    }
+    
+    @objc private func addButtonPressed() {
+        
+        let vc = AddListVC()
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
     }
     
     private func setUpTableView() {

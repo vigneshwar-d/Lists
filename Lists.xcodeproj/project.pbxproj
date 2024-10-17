@@ -22,6 +22,7 @@
 		BDA5A5E52CBEB34200866748 /* ListItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA5A5E32CBEB34200866748 /* ListItemsTableViewCell.xib */; };
 		BDA5A5EE2CBFFA6900866748 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA5A5ED2CBFFA6900866748 /* ListItem.swift */; };
 		BDBF8E592CC0F08700AA4C4C /* ListDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDBF8E572CC0F08700AA4C4C /* ListDataModel.xcdatamodeld */; };
+		BDBF8E5D2CC1390B00AA4C4C /* AddListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF8E5C2CC1390B00AA4C4C /* AddListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BDA5A5E32CBEB34200866748 /* ListItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemsTableViewCell.xib; sourceTree = "<group>"; };
 		BDA5A5ED2CBFFA6900866748 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		BDBF8E582CC0F08700AA4C4C /* ListDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListDataModel.xcdatamodel; sourceTree = "<group>"; };
+		BDBF8E5C2CC1390B00AA4C4C /* AddListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				BDA5A5C82CBE9F6200866748 /* AllListsViewController.swift */,
 				BDA5A5E02CBEB1F100866748 /* ListItemViewController.swift */,
+				BDBF8E5C2CC1390B00AA4C4C /* AddListVC.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				BDA5A5C92CBE9F6200866748 /* AllListsViewController.swift in Sources */,
 				BDA5A5DA2CBEA1A000866748 /* ListCellTableViewCell.swift in Sources */,
 				BDA5A5EE2CBFFA6900866748 /* ListItem.swift in Sources */,
+				BDBF8E5D2CC1390B00AA4C4C /* AddListVC.swift in Sources */,
 				BDA5A5DD2CBEAE9500866748 /* ListsViewModel.swift in Sources */,
 				BDA5A5C52CBE9F6200866748 /* AppDelegate.swift in Sources */,
 				BDA5A5E12CBEB1F100866748 /* ListItemViewController.swift in Sources */,
